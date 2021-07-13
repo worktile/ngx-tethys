@@ -1,0 +1,17 @@
+<div class="thy-rate-container" [class.thy-rate-container--disabled]="thyDisabled" (mouseleave)="onRateLeave($event)">
+  <ng-container *ngFor="let star of rateArray; let index = index; trackBy: trackByFn">
+    <div
+      thyStopPropagation
+      class="thy-rate-star"
+      [ngClass]="rateStyleArray[index] || ''"
+      thy-rate-item
+      [allowHalf]="thyAllowHalf"
+      [iconValue]="iconValue"
+      [iconTemplate]="iconTemplate"
+      (itemHover)="itemHover($event, index)"
+      (itemClick)="itemClick($event, index)"
+      [thyTooltip]="thyTooltips[index]"
+      thyTooltipPlacement="top"
+    ></div>
+  </ng-container>
+</div>

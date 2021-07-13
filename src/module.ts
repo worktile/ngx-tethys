@@ -67,6 +67,7 @@ import { ThyDividerModule } from 'ngx-tethys/divider';
 import { ThyFullscreenModule } from 'ngx-tethys/fullscreen';
 import { ThyGuiderModule } from 'ngx-tethys/guider';
 import { ThyResizableModule } from 'ngx-tethys/resizable';
+import { ThyRateModule } from 'ngx-tethys/rate';
 
 const IMPORT_EXPORT_MODULES = [
     ThyLayoutModule,
@@ -134,7 +135,8 @@ const IMPORT_EXPORT_MODULES = [
     ThyCalendarModule,
     ThyFullscreenModule,
     ThyGuiderModule,
-    ThyResizableModule
+    ThyResizableModule,
+    ThyRateModule
 ];
 
 /**

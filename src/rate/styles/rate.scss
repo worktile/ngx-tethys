@@ -1,0 +1,57 @@
+.thy-rate-container {
+    display: flex;
+    align-items: center;
+    color: #ffcd5d;
+
+    .thy-rate-star {
+        position: relative;
+        font-size: 18px;
+        color: inherit;
+        transition: all 0.3s;
+        &:not(:last-child) {
+            margin-right: 8px;
+        }
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+
+        .thy-rate-item-left {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            opacity: 0;
+        }
+
+        .thy-rate-item-left,
+        .thy-rate-item-all {
+            color: #f0f0f0;
+            transition: all 0.3s;
+            .thy-icon {
+                font-size: 18px;
+            }
+        }
+
+        &--full {
+            .thy-rate-item-all {
+                color: inherit;
+                opacity: 1;
+            }
+        }
+
+        &--active,
+        &--half {
+            .thy-rate-item-left {
+                color: inherit;
+                opacity: 1;
+            }
+        }
+    }
+
+    &--disabled {
+        pointer-events: none;
+    }
+}
