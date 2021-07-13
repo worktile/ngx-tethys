@@ -1,10 +1,6 @@
 <ng-container>
-  <span
-    *ngIf="st.isShowBadge"
-    class="thy-badge {{ badgeClassName }}"
-    [style.color]="textColor"
-    [style.backgroundColor]="backgroundColor"
-    >{{ displayContent }}</span
-  >
+  <div *ngIf="st.isShowBadge" class="thy-badge {{ badgeClassName }}" [style.color]="textColor" [style.backgroundColor]="backgroundColor">
+    <span>{{ displayContent }}</span>
+  </div>
 </ng-container>
 <ng-content></ng-content>

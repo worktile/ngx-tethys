@@ -17,7 +17,6 @@
     font-weight: $badge-font-weight;
     line-height: 1;
     vertical-align: 1px;
-    padding: $badge-padding-y $badge-padding-x;
     @include border-radius($badge-border-radius);
 }
 
@@ -27,21 +26,21 @@
     // vertical-align: baseline;
     color: $badge-color;
     background-color: $badge-bg;
-    @include set-badge-size($font-size-sm, 2px, 0.3rem);
+    @include set-badge-size(1rem, 0.75rem, 4px);
 }
 
 .thy-badge-dot {
     padding: 0;
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     // vertical-align: middle;
 }
 
 .thy-badge-hollow {
     padding: 0;
-    width: 6px;
-    height: 6px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     // vertical-align: middle;
     border: solid 1px $badge-bg;
@@ -92,20 +91,11 @@
     z-index: 1;
 }
 
-.thy-badge-multiple-words {
-    padding-left: 7px;
-    padding-right: 7px;
-}
-
 .thy-badge-lg {
     &.thy-badge-count {
-        @include set-badge-size($font-size-sm, 6px, 9px);
+        @include set-badge-size(1.5rem, 0.875rem, 4px);
     }
-    &.thy-badge-dot,
-    &.thy-badge-hollow {
-        width: 10px;
-        height: 10px;
-    }
+
     &.thy-badge-hollow {
         border-width: 2px;
     }
@@ -113,7 +103,12 @@
 
 .thy-badge-sm {
     &.thy-badge-count {
-        @include set-badge-size($font-size-xs, 1px, 4px);
+        @include set-badge-size(0.875rem, 0.75rem, 3px);
+    }
+    &.thy-badge-dot,
+    &.thy-badge-hollow {
+        width: 6px;
+        height: 6px;
     }
 }
 

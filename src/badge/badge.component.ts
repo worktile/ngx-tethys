@@ -29,8 +29,7 @@ export class ThyBadgeComponent implements OnInit {
         'thy-badge-primary': false,
         'thy-badge-warning': false,
         'thy-badge-secondary': false,
-        'thy-badge-sup': true,
-        'thy-badge-multiple-words': false
+        'thy-badge-sup': true
     };
 
     st: {
@@ -199,7 +198,6 @@ export class ThyBadgeComponent implements OnInit {
 
     private combineBadgeClassName() {
         this.badgeClassNameMap['thy-badge-sup'] = this.st.isSup;
-        this.explorationValueLength();
 
         const _badgeClassNames = [];
         for (const key in this.badgeClassNameMap) {
@@ -222,12 +220,6 @@ export class ThyBadgeComponent implements OnInit {
             this.st.isShowBadge = false;
         } else {
             this.st.isShowBadge = true;
-        }
-    }
-
-    private explorationValueLength() {
-        if (this.st.value && this.st.value.toString().length > 1 && this.st.isSup) {
-            this.badgeClassNameMap['thy-badge-multiple-words'] = true;
         }
     }
 

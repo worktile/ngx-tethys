@@ -2,15 +2,19 @@
     color: $color;
     background-color: $badge-bg;
     border-color: $badge-bg;
-    .nav-pills>.active>a>& {
+    .nav-pills > .active > a > & {
         color: $color;
         background-color: $badge-bg;
     }
 }
 
-@mixin set-badge-size($font-size, $padding-horizontal, $padding-vertical) {
+@mixin set-badge-size($diameter, $font-size, $padding) {
+    min-width: $diameter;
+    height: $diameter;
+    border-radius: $diameter;
+    line-height: $diameter;
     font-size: $font-size;
-    padding: $padding-horizontal $padding-vertical;
+    padding: 0px $padding;
 }
 
 // bootstrap 4
